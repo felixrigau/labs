@@ -1,9 +1,10 @@
 // Media Queries Mixin
 
-$phone-landscape: 36rem;  //576px base 16px
-$tablet:          48rem;  //768px base 16px
-$desktop:         62rem;  //992px base 16px
-$large-desktop:   75rem;  //1200px base 16px
+$phone-landscape: 36rem;      //576px base 16px
+$tablet:          48rem;      //768px base 16px
+$custom-desktop:  50.625rem;  //810px base 16px
+$desktop:         62rem;      //992px base 16px
+$large-desktop:   75rem;      //1200px base 16px
 
 @mixin mobile {
     @media only screen and (min-width : $phone-landscape) {
@@ -13,6 +14,12 @@ $large-desktop:   75rem;  //1200px base 16px
 
 @mixin tablet {
     @media only screen and (min-width : $tablet) {
+        @content;
+    }
+}
+
+@mixin custom-desktop {
+    @media only screen and (min-width : $custom-desktop) {
         @content;
     }
 }

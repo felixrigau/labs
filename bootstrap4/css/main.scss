@@ -2,3 +2,125 @@
 @import "media_queries";
 @import "typography";
 
+body {
+    font-family: $open;
+    
+    @include custom-desktop {
+        background-color: $black;
+    }
+}
+
+.container {
+    max-width: 810px;
+}
+
+.main-wrapper {
+    align-content: space-between;
+    background: url(../img/bg1.png) center;
+    background-size: cover;    
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: scroll;
+    
+    @include tablet {
+        height: auto;  
+        background: none;
+        background-size: none;
+        margin-bottom: auto;
+    }
+}
+
+.hero {
+    align-content: space-between;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 50%;
+    max-width: 100%;
+    
+    @include tablet {
+        background: url(../img/bg1.png) center;
+        background-size: cover;
+        height: 424px;
+    }
+}
+
+.hero__title {
+    color: $primary-blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px 0 10px 0;
+    text-align: center;
+    
+    @include tablet {
+        font-size: 36px;
+        margin: 40px 0 20px 0;
+    }
+}
+
+.hero__subtitle {
+    color: $white;
+    font-size: $large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cta__buttom {
+    background-color: $primary-blue;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    padding: 0;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    width: 220px;
+    
+    @include tablet {
+        margin-bottom: 50px;
+    }
+}
+
+.cta__buttom--blue {
+    background-color: $primary-blue;
+    color: white;
+}
+
+.cta__buttom--grey {
+    background-color: $dark-grey;
+    color: $primary-blue;
+}
+
+.details {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 67px;
+}
+
+.details__description {
+    background-color: rgba($dark-grey, .65);
+    color: $white;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    padding: 30px 15px 15px;
+    text-align: center;
+}
+
+footer {
+    background-color: $dark-grey;
+    bottom: 0px;
+    display: flex;
+    height: 67px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer__link {
+    color: $primary-blue;
+    cursor: pointer;
+    font-size: $regular;
+    margin: auto;
+}
