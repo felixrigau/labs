@@ -4,9 +4,6 @@ body {
     body {
       background-color: #000; } }
 
-.container {
-  max-width: 810px; }
-
 .main-wrapper {
   align-content: space-between;
   background: url(../img/bg1.png) center;
@@ -14,13 +11,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  overflow: scroll; }
-  @media only screen and (min-width: 48rem) {
+  overflow: scroll;
+  max-width: 810px; }
+  @media only screen and (min-width: 36rem) {
     .main-wrapper {
+      background: #FFF;
       height: auto;
-      background: none;
-      background-size: none;
-      margin-bottom: auto; } }
+      margin-bottom: auto;
+      overflow: initial; } }
 
 .hero {
   align-content: space-between;
@@ -29,10 +27,15 @@ body {
   justify-content: center;
   height: 50%;
   max-width: 100%; }
-  @media only screen and (min-width: 48rem) {
+  @media only screen and (min-width: 36rem) {
     .hero {
+      align-content: space-around;
       background: url(../img/bg1.png) center;
       background-size: cover;
+      height: 350px; } }
+  @media only screen and (min-width: 48rem) {
+    .hero {
+      align-content: space-between;
       height: 424px; } }
 
 .hero__title {
@@ -61,24 +64,33 @@ body {
   height: 50px;
   padding: 0;
   letter-spacing: 1px;
-  margin-bottom: 15px;
   width: 220px; }
-  @media only screen and (min-width: 48rem) {
-    .cta__buttom {
-      margin-bottom: 50px; } }
 
 .cta__buttom--blue {
   background-color: #00aced;
-  color: white; }
+  color: white;
+  margin-bottom: 15px; }
+  @media only screen and (min-width: 48rem) {
+    .cta__buttom--blue {
+      margin-bottom: 50px; } }
 
 .cta__buttom--grey {
   background-color: #263238;
   color: #00aced; }
 
 .details {
-  padding: 0;
   margin: 0;
-  margin-bottom: 67px; }
+  margin-bottom: 67px;
+  padding: 0; }
+  @media only screen and (min-width: 36rem) {
+    .details {
+      margin: auto;
+      padding: auto; } }
+  @media only screen and (min-width: 48rem) {
+    .details {
+      background-color: #FFF;
+      flex-direction: column;
+      padding-bottom: 50px; } }
 
 .details__description {
   background-color: rgba(38, 50, 56, 0.65);
@@ -88,6 +100,15 @@ body {
   margin: 0;
   padding: 30px 15px 15px;
   text-align: center; }
+  @media only screen and (min-width: 36rem) {
+    .details__description {
+      background-color: #FFF;
+      color: #263238;
+      line-height: 22px;
+      padding: 55px 15px; } }
+  @media only screen and (min-width: 48rem) {
+    .details__description {
+      padding: 60px 120px 50px; } }
 
 footer {
   background-color: #263238;
@@ -96,6 +117,9 @@ footer {
   height: 67px;
   position: absolute;
   width: 100%; }
+  @media only screen and (min-width: 48rem) {
+    footer {
+      position: relative; } }
 
 .footer__link {
   color: #00aced;

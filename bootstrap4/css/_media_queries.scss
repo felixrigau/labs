@@ -6,7 +6,7 @@ $custom-desktop:  50.625rem;  //810px base 16px
 $desktop:         62rem;      //992px base 16px
 $large-desktop:   75rem;      //1200px base 16px
 
-@mixin mobile {
+@mixin mobile-landscape {
     @media only screen and (min-width : $phone-landscape) {
         @content;
     }

@@ -10,10 +10,6 @@ body {
     }
 }
 
-.container {
-    max-width: 810px;
-}
-
 .main-wrapper {
     align-content: space-between;
     background: url(../img/bg1.png) center;
@@ -22,12 +18,13 @@ body {
     flex-wrap: wrap;
     height: 100vh;
     overflow: scroll;
+    max-width: 810px;
     
-    @include tablet {
+    @include mobile-landscape {
+        background: $white;
         height: auto;  
-        background: none;
-        background-size: none;
         margin-bottom: auto;
+        overflow: initial;
     }
 }
 
@@ -39,9 +36,15 @@ body {
     height: 50%;
     max-width: 100%;
     
-    @include tablet {
+    @include mobile-landscape {
+        align-content: space-around;
         background: url(../img/bg1.png) center;
         background-size: cover;
+        height: 350px;
+    }
+    
+    @include tablet {
+        align-content: space-between;
         height: 424px;
     }
 }
@@ -75,17 +78,17 @@ body {
     height: 50px;
     padding: 0;
     letter-spacing: 1px;
-    margin-bottom: 15px;
     width: 220px;
-    
-    @include tablet {
-        margin-bottom: 50px;
-    }
 }
 
 .cta__buttom--blue {
     background-color: $primary-blue;
     color: white;
+    margin-bottom: 15px;
+    
+    @include tablet {
+        margin-bottom: 50px;
+    }
 }
 
 .cta__buttom--grey {
@@ -94,9 +97,20 @@ body {
 }
 
 .details {
-    padding: 0;
     margin: 0;
     margin-bottom: 67px;
+    padding: 0;
+    
+     @include mobile-landscape {
+        margin: auto;
+        padding: auto;
+    }
+    
+    @include tablet {
+        background-color: $white;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
 }
 
 .details__description {
@@ -107,6 +121,17 @@ body {
     margin: 0;
     padding: 30px 15px 15px;
     text-align: center;
+    
+    @include mobile-landscape {
+        background-color: $white;
+        color: $dark-grey;
+        line-height: 22px;
+        padding: 55px 15px;
+    }
+    
+    @include tablet {
+        padding: 60px 120px 50px;
+    }
 }
 
 footer {
@@ -116,6 +141,10 @@ footer {
     height: 67px;
     position: absolute;
     width: 100%;
+    
+    @include tablet {
+        position: relative;
+    }
 }
 
 .footer__link {
