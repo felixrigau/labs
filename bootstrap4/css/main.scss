@@ -173,6 +173,8 @@ footer {
     bottom: 0px;
     display: flex;
     height: 67px;
+    margin: auto;
+    max-width: 810px;
     position: absolute;
     width: 100%;
     
@@ -260,5 +262,26 @@ footer {
 //Form Page
 
 .banner {
-    background-image: url('../img/bg2.png');
+    background: url(../img/bg2.png) center;
+    background-size: 200%;
+    background-position: center;
+    display: flex;
+    height: 250px;
+    width: 100%;
+    
+    @include mobile-landscape {
+        background-size: cover;
+        font-size: 36px;
+    }
+}
+
+.banner__title {
+    color: $primary-blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+    
+    @include mobile-landscape {
+        font-size: 36px;
+    }
 }
