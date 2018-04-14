@@ -73,6 +73,7 @@ body {
     background-color: $primary-blue;
     border: none;
     color: white;
+    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     height: 50px;
@@ -94,6 +95,39 @@ body {
 .cta__buttom--grey {
     background-color: $dark-grey;
     color: $primary-blue;
+}
+
+.cta__buttom--fb {
+    background-color: $facebook-blue;
+}
+
+.cta__buttom--tw {
+    background-color: $twitter-blue;
+}
+
+.cta__buttom--email {
+    background-color: $medium-grey;
+}
+
+.cta__buttom--social {
+    color: $white;
+    height: 40px;
+    margin: 20px auto 0;
+    position: relative;
+    width: 236px;
+    
+    &:first-child {
+        margin: 0 auto;
+    }
+    
+    i {
+        left: 0;
+        margin-left: 15px;
+        padding: 10px 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+    }
 }
 
 .details {
@@ -152,4 +186,73 @@ footer {
     cursor: pointer;
     font-size: $regular;
     margin: auto;
+    
+    &:hover {
+        color: $primary-blue;
+        text-decoration: none;
+    }
+}
+
+.modal-wrapper {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s ease-in;
+    z-index: 9999;
+}
+
+.modal-component {
+    background-color: $soft-grey;
+    height: 326px;
+    margin: 0 15px;
+    width: 100%;
+    
+    @include mobile-landscape {
+        margin: auto;
+        width: 382px;
+    }
+}
+
+.modal-component__header {
+    text-align: center;
+}
+
+.modal-component__header {
+    color: $white;
+    background-color: $secondary-blue;
+    display: flex;
+    height: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-component__title {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-component__close-icon {
+    cursor: pointer;
+    font-size: 27px;
+    padding: 5px 10px 5px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-component__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px;
+}
+
+.modal-show {
+    opacity: 1;
 }
