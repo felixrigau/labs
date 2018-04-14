@@ -10,6 +10,10 @@ body {
     }
 }
 
+.custom-width {
+    max-width: 810px;
+}
+
 .main-wrapper {
     align-content: space-between;
     background: url(../img/bg1.png) center;
@@ -18,7 +22,6 @@ body {
     flex-wrap: wrap;
     height: 100vh;
     overflow: scroll;
-    max-width: 810px;
     
     @include mobile-landscape {
         background: $white;
@@ -130,6 +133,28 @@ body {
     }
 }
 
+.cta__buttom--video {
+    background-color: $dark-grey;
+    color: $white;
+    margin: 45px auto 0;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+    
+    i {
+        right: 0;
+        margin-right: 15px;
+        padding: 15px 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+    }
+}
+
+.cta__buttom--send {
+    margin: 45px auto 0;
+}
+
 .details {
     margin: 0;
     margin-bottom: 67px;
@@ -170,17 +195,19 @@ body {
 
 footer {
     background-color: $dark-grey;
-    bottom: 0px;
     display: flex;
     height: 67px;
     margin: auto;
-    max-width: 810px;
-    position: absolute;
     width: 100%;
+}
+
+.footer--fixed {
+    bottom: 0px;
+    position: absolute;
     
-    @include tablet {
+    @include mobile-landscape {
         position: relative;
-    }
+    } 
 }
 
 .footer__link {
@@ -283,5 +310,75 @@ footer {
     
     @include mobile-landscape {
         font-size: 36px;
+    }
+}
+
+.form-section {
+    background-color: $white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section__copy {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 15px;
+    text-align: center;
+    
+    @include mobile-landscape {
+        width: 560px;
+        margin: auto;
+    }
+}
+
+.form-section__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.form-section__input {
+    border: 2px solid $dark-grey;
+    height: 40px;
+    margin: 18px 30px 0;
+    padding-left: 10px;
+    font-size: 16px;
+    
+    $font-size-placeholder: 12px;
+    
+    &:first-child {
+        margin: 0 30px;
+    }
+    
+    &::-webkit-input-placeholder {
+      font-size: $font-size-placeholder;
+    }
+    
+    &::-moz-placeholder {
+      font-size: $font-size-placeholder;
+    }
+    
+    &:-ms-input-placeholder {
+      font-size: $font-size-placeholder;
+    }
+    
+    &:-moz-placeholder {
+      font-size: $font-size-placeholder;
+    }
+}
+
+.form-section__checkbox-wrapper {
+    margin: 45px auto 0;
+    width: 225px;
+    
+    label {
+        font-size: 12px;
+    }
+    
+    a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
