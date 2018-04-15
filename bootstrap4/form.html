@@ -29,13 +29,15 @@
                     <i class="fas fa-video"></i>
                     Graba tu vídeo
                 </button>
-                <div class="form-section__checkbox-wrapper">
-                    <div>
-                        <input type="checkbox" id="legal-bases" name="accept" value="accept-legal-bases">
+                <div class="form-section__checkbox-group">
+                    <div class="form-section__checkbox-wrapper">
+                        <input class="form-section__checkbox" type="checkbox" id="legal-bases" name="accept" value="accept-legal-bases">
+                        <label class="form-section__checkbox-style" for="legal-bases"></label>
                         <label for="legal-bases">Acepto las <a href="#">Bases Legales</a></label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="subscribe" name="subscribe" value="accept-subscribe">
+                    <div class="form-section__checkbox-wrapper">
+                        <input class="form-section__checkbox" type="checkbox" id="subscribe" name="subscribe" value="accept-subscribe" checked>
+                        <label class="form-section__checkbox-style" for="subscribe"></label>
                         <label for="subscribe">Acepto recibir información comercial</label>
                     </div>
                 </div>

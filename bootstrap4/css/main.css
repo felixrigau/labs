@@ -301,14 +301,48 @@ footer {
   .form-section__input:-moz-placeholder {
     font-size: 12px; }
 
-.form-section__checkbox-wrapper {
+.form-section__checkbox-group {
   margin: 45px auto 0;
   width: 225px; }
-  .form-section__checkbox-wrapper label {
-    font-size: 12px; }
-  .form-section__checkbox-wrapper a {
+  .form-section__checkbox-group label {
+    font-size: 11px; }
+  .form-section__checkbox-group a {
     color: inherit;
     cursor: pointer;
     text-decoration: underline; }
+
+.form-section__checkbox-wrapper {
+  display: flex;
+  height: 20px;
+  position: relative;
+  margin-top: 10px; }
+  .form-section__checkbox-wrapper:first-child {
+    margin-top: 0; }
+
+.form-section__checkbox {
+  margin-right: 10px;
+  visibility: hidden; }
+
+.form-section__checkbox-style {
+  background-color: #edf2f2;
+  border: 1px solid #263238;
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 14px; }
+
+.form-section__checkbox-style::after {
+  content: '';
+  background-color: #00aced;
+  height: 8px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  width: 8px; }
+
+.form-section__checkbox:checked + .form-section__checkbox-style::after {
+  opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
