@@ -88,7 +88,7 @@ body {
   background-color: #00aced; }
 
 .cta__buttom--email {
-  background-color: #6e6e6e; }
+  background-color: #c2c2c2; }
 
 .cta__buttom--social {
   color: #FFF;
@@ -193,7 +193,7 @@ footer {
   z-index: 9999; }
 
 .modal-component {
-  background-color: #c2c2c2;
+  background-color: #edf2f2;
   height: 326px;
   margin: 0 15px;
   width: 100%; }
@@ -250,7 +250,8 @@ footer {
   color: #00aced;
   font-size: 30px;
   font-weight: bold;
-  margin: auto; }
+  margin: auto;
+  text-align: center; }
   @media only screen and (min-width: 36rem) {
     .banner__title {
       font-size: 36px; } }
@@ -282,8 +283,15 @@ footer {
   margin: 18px 30px 0;
   padding-left: 10px;
   font-size: 16px; }
+  @media only screen and (min-width: 36rem) {
+    .form-section__input {
+      margin: 18px auto 0;
+      width: 320px; } }
   .form-section__input:first-child {
     margin: 0 30px; }
+    @media only screen and (min-width: 36rem) {
+      .form-section__input:first-child {
+        margin: 18px auto 0; } }
   .form-section__input::-webkit-input-placeholder {
     font-size: 12px; }
   .form-section__input::-moz-placeholder {

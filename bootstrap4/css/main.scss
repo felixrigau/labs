@@ -307,6 +307,7 @@ footer {
     font-size: 30px;
     font-weight: bold;
     margin: auto;
+    text-align: center;
     
     @include mobile-landscape {
         font-size: 36px;
@@ -345,10 +346,19 @@ footer {
     padding-left: 10px;
     font-size: 16px;
     
+    @include mobile-landscape {
+        margin: 18px auto 0;
+        width: 320px;
+    }
+    
     $font-size-placeholder: 12px;
     
     &:first-child {
         margin: 0 30px;
+        
+        @include mobile-landscape {
+            margin: 18px auto 0;
+        }
     }
     
     &::-webkit-input-placeholder {
