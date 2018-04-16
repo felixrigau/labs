@@ -156,84 +156,6 @@ body {
     .details__description {
       padding: 60px 120px 50px; } }
 
-footer {
-  background-color: #263238;
-  display: flex;
-  height: 67px;
-  margin: auto;
-  width: 100%; }
-
-.footer--fixed {
-  bottom: 0px;
-  position: absolute; }
-  @media only screen and (min-width: 36rem) {
-    .footer--fixed {
-      position: relative; } }
-
-.footer__link {
-  color: #00aced;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: auto; }
-  .footer__link:hover {
-    color: #00aced;
-    text-decoration: none; }
-
-.modal-wrapper {
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  bottom: 0;
-  display: none;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity 0.5s ease-in;
-  z-index: 9999; }
-
-.modal-component {
-  background-color: #edf2f2;
-  height: 326px;
-  margin: 0 15px;
-  width: 100%; }
-  @media only screen and (min-width: 36rem) {
-    .modal-component {
-      margin: auto;
-      width: 382px; } }
-
-.modal-component__header {
-  text-align: center; }
-
-.modal-component__header {
-  color: #FFF;
-  background-color: #697497;
-  display: flex;
-  height: 50px;
-  position: relative;
-  text-align: center; }
-
-.modal-component__title {
-  margin: auto;
-  font-size: 18px;
-  font-weight: 600; }
-
-.modal-component__close-icon {
-  cursor: pointer;
-  font-size: 27px;
-  padding: 5px 10px 5px 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-.modal-component__buttons-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-top: 55px; }
-
-.modal-show {
-  opacity: 1; }
-
 .banner {
   background: url(../img/bg2.png) center;
   background-size: 200%;
@@ -303,7 +225,7 @@ footer {
 
 .form-section__checkbox-group {
   margin: 45px auto 0;
-  width: 225px; }
+  width: 220px; }
   .form-section__checkbox-group label {
     font-size: 11px; }
   .form-section__checkbox-group a {
@@ -326,23 +248,102 @@ footer {
 .form-section__checkbox-style {
   background-color: #edf2f2;
   border: 1px solid #263238;
-  height: 14px;
+  height: 15px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 14px; }
+  width: 15px; }
 
-.form-section__checkbox-style::after {
+.form-section__checkbox-style:after {
   content: '';
   background-color: #00aced;
-  height: 8px;
-  left: 2px;
+  height: 7px;
+  left: 3px;
   opacity: 0;
   position: absolute;
-  top: 2px;
-  width: 8px; }
+  top: 3px;
+  width: 7px; }
 
-.form-section__checkbox:checked + .form-section__checkbox-style::after {
+.form-section__checkbox:checked + .form-section__checkbox-style:after {
+  opacity: 1; }
+
+footer {
+  background-color: #263238;
+  display: flex;
+  height: 67px;
+  margin: auto;
+  width: 100%; }
+
+.footer--fixed {
+  bottom: 0px;
+  position: absolute; }
+  @media only screen and (min-width: 36rem) {
+    .footer--fixed {
+      position: relative; } }
+
+.footer__link {
+  color: #00aced;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: auto; }
+  .footer__link:hover {
+    color: #00aced;
+    text-decoration: none; }
+
+.modal-wrapper {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: none;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s ease-in;
+  z-index: 9999; }
+
+.modal-component {
+  background-color: #edf2f2;
+  height: 326px;
+  margin: 0 15px;
+  width: 100%; }
+  @media only screen and (min-width: 36rem) {
+    .modal-component {
+      margin: auto;
+      width: 382px; } }
+
+.modal-component__header {
+  text-align: center; }
+
+.modal-component__header {
+  color: #FFF;
+  background-color: #697497;
+  display: flex;
+  height: 50px;
+  position: relative;
+  text-align: center; }
+
+.modal-component__title {
+  margin: auto;
+  font-size: 18px;
+  font-weight: 600; }
+
+.modal-component__close-icon {
+  cursor: pointer;
+  font-size: 27px;
+  padding: 5px 10px 5px 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.modal-component__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px; }
+
+.modal-show {
   opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

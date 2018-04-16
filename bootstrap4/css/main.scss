@@ -14,6 +14,8 @@ body {
     max-width: 810px;
 }
 
+// **************** Main Page ****************
+
 .main-wrapper {
     align-content: space-between;
     background: url(../img/bg1.png) center;
@@ -193,100 +195,7 @@ body {
     }
 }
 
-footer {
-    background-color: $dark-grey;
-    display: flex;
-    height: 67px;
-    margin: auto;
-    width: 100%;
-}
-
-.footer--fixed {
-    bottom: 0px;
-    position: absolute;
-    
-    @include mobile-landscape {
-        position: relative;
-    } 
-}
-
-.footer__link {
-    color: $primary-blue;
-    cursor: pointer;
-    font-size: $regular;
-    margin: auto;
-    
-    &:hover {
-        color: $primary-blue;
-        text-decoration: none;
-    }
-}
-
-.modal-wrapper {
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-    bottom: 0;
-    display: none;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: opacity 0.5s ease-in;
-    z-index: 9999;
-}
-
-.modal-component {
-    background-color: $soft-grey;
-    height: 326px;
-    margin: 0 15px;
-    width: 100%;
-    
-    @include mobile-landscape {
-        margin: auto;
-        width: 382px;
-    }
-}
-
-.modal-component__header {
-    text-align: center;
-}
-
-.modal-component__header {
-    color: $white;
-    background-color: $secondary-blue;
-    display: flex;
-    height: 50px;
-    position: relative;
-    text-align: center;
-}
-
-.modal-component__title {
-    margin: auto;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.modal-component__close-icon {
-    cursor: pointer;
-    font-size: 27px;
-    padding: 5px 10px 5px 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.modal-component__buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 55px;
-}
-
-.modal-show {
-    opacity: 1;
-}
-
-//Form Page
+// **************** Form Page  ****************
 
 .banner {
     background: url(../img/bg2.png) center;
@@ -380,7 +289,7 @@ footer {
 
 .form-section__checkbox-group {
     margin: 45px auto 0;
-    width: 225px;
+    width: 220px;
     
     label {
         font-size: 11px;
@@ -412,25 +321,122 @@ footer {
 .form-section__checkbox-style {
     background-color: $soft-grey;
     border: 1px solid $dark-grey;
-    height: 14px;
+    height: 15px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 14px;
+    width: 15px;
 }
 
-.form-section__checkbox-style::after {
+.form-section__checkbox-style:after {
     content: '';
     background-color: $primary-blue;
-    height: 8px;
-    left: 2px;
+    height: 7px;
+    left: 3px;
     opacity: 0;
     position: absolute;
-    top: 2px;
-    width: 8px;
+    top: 3px;
+    width: 7px;
 }
 
-.form-section__checkbox:checked + .form-section__checkbox-style::after {
+.form-section__checkbox:checked + .form-section__checkbox-style:after {
     opacity: 1;
 }
 
+//**************** Footer Styles ****************
+
+footer {
+    background-color: $dark-grey;
+    display: flex;
+    height: 67px;
+    margin: auto;
+    width: 100%;
+}
+
+.footer--fixed {
+    bottom: 0px;
+    position: absolute;
+    
+    @include mobile-landscape {
+        position: relative;
+    } 
+}
+
+.footer__link {
+    color: $primary-blue;
+    cursor: pointer;
+    font-size: $regular;
+    font-weight: 300;
+    margin: auto;
+    
+    &:hover {
+        color: $primary-blue;
+        text-decoration: none;
+    }
+}
+
+//***************** Modal styles ****************
+
+.modal-wrapper {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s ease-in;
+    z-index: 9999;
+}
+
+.modal-component {
+    background-color: $soft-grey;
+    height: 326px;
+    margin: 0 15px;
+    width: 100%;
+    
+    @include mobile-landscape {
+        margin: auto;
+        width: 382px;
+    }
+}
+
+.modal-component__header {
+    text-align: center;
+}
+
+.modal-component__header {
+    color: $white;
+    background-color: $secondary-blue;
+    display: flex;
+    height: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-component__title {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-component__close-icon {
+    cursor: pointer;
+    font-size: 27px;
+    padding: 5px 10px 5px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-component__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px;
+}
+
+.modal-show {
+    opacity: 1;
+}
