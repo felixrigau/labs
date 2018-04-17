@@ -1,18 +1,24 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <course-list></course-list>
+<template lang="pug">
+  .app
+    img(src="./assets/logo.png")
+    course-form(:courseList="courseList")
+    course-list(:courseList="courseList")
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      courseList: []
+    }
+  },
 }
 </script>
 
 <style>
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

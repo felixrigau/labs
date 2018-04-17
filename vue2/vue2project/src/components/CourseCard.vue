@@ -4,32 +4,34 @@
     p {{course.subTitle}}
     p {{course.startDate}}
     p {{course.endDate}}
+    p(v-if="courseStatus") {{courseStatus}}
 </template>
 
 <script>
   export default {
+    props: ['course'],
     data() {
       return {
-        course: {
-          title: '',
-          subTitle: '',
-          startDate: null,
-          endDate: null,
-          toStart: false,
-          finished: false,
-          inProgress: false
-        },
+        
       }
     },
     computed: {
       classObject: function () {
-        console.log('this.course.finished', this.course.finished)
-        console.log('this.course.toStart', this.course.toStart)
-        console.log('this.course.inProgress', this.course.inProgress)
         return {
           'finished': this.course.finished && this.course.finished === true,
           'inprogress': this.course.inProgress && this.course.inProgress === true,  
           'tostart': this.course.toStart && this.course.toStart === true
+        }
+      },
+      courseStatus: function () {
+        if (this.course.finished) {
+          return 'Terminado';
+        } 
+        else if (this.course.inProgress){
+          return 'En progreso';
+        } 
+        else {
+          return false
         }
       }
     },
