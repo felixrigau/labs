@@ -5,9 +5,9 @@
   "author": "Felix Rigau <felixrigau88@gmail.com>",
   "private": true,
   "scripts": {
-    "//": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev": "webpack-dev-server --open --inline --host $IP --port $PORT --public $C9_HOSTNAME --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev-c9": "webpack-dev-server --open --inline --host $IP --port $PORT --public $C9_HOSTNAME --config build/webpack.dev.conf.js",
+    "start": "npm run dev-c9",
     "build": "node build/build.js"
   },
   "dependencies": {

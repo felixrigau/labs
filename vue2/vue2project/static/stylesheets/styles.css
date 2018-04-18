@@ -1,19 +1,57 @@
+/*
+@include mobile-landscape {
+    
+}
+
+
+@include tablet {
+    
+}
+
+@include desktop {
+    
+}
+
+@include large-desktop {
+    
+}
+
+
+
+*/
+body {
+  font-family: "Lato";
+  background-color: #fafafa; }
+
 header {
   background-color: #ffab00;
   height: auto;
   left: 0;
   padding: 12px 0;
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 3; }
+  @media only screen and (min-width: 62rem) {
+    header {
+      text-align: center; } }
 
 .header__logo {
   color: #FFFFFF;
   font-family: "Pacifico", cursive;
-  font-size: 30px;
-  margin: 0 0 10px 30px;
-  padding: 0; }
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0;
+  width: inherit;
+  max-width: 1200px; }
+  @media only screen and (min-width: 48rem) {
+    .header__logo {
+      font-size: 26px;
+      margin: 10px auto; } }
+  @media only screen and (min-width: 62rem) {
+    .header__logo {
+      font-size: 32px; } }
   .header__logo i {
     margin: 5px;
     transform: rotate(-20deg); }
@@ -22,26 +60,69 @@ header {
   background: url("../images/bk.jpg") fixed top center/cover no-repeat;
   background-size: cover;
   display: flex;
-  height: 500px;
-  margin-top: 70px;
+  height: 300px;
+  margin-top: 0;
   width: 100%; }
+  @media only screen and (min-width: 48rem) {
+    .hero {
+      margin-top: 50px; } }
+  @media only screen and (min-width: 62rem) {
+    .hero {
+      height: 500px;
+      margin-top: 70px; } }
 
 .hero__copy-area {
   margin: auto;
   text-align: center;
-  width: 50%;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.7); }
+  @media only screen and (min-width: 62rem) {
+    .hero__copy-area {
+      width: 50%; } }
 
 .hero__slogan {
   color: #FFFFFF;
-  font-family: "Lato";
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 27px; }
+  font-size: 16px; }
+  @media only screen and (min-width: 48rem) {
+    .hero__slogan {
+      font-size: 21px; } }
+  @media only screen and (min-width: 62rem) {
+    .hero__slogan {
+      font-size: 27px; } }
 
 .hero__name {
   color: white;
   font-family: "Pacifico", cursive;
-  font-size: 73px; }
+  font-size: 26px; }
+  @media only screen and (min-width: 48rem) {
+    .hero__name {
+      font-size: 48px; } }
+  @media only screen and (min-width: 62rem) {
+    .hero__name {
+      font-size: 73px; } }
+
+footer {
+  background-color: #023a67;
+  bottom: 0;
+  display: flex;
+  font-size: 12px;
+  position: relative;
+  width: 100%;
+  z-index: 2; }
+  @media only screen and (min-width: 62rem) {
+    footer {
+      position: fixed;
+      font-size: 18px; } }
+  footer a {
+    color: white;
+    margin: 20px auto;
+    text-decoration: none; }
+    @media only screen and (min-width: 48rem) {
+      footer a {
+        margin: 25px auto; } }
+    @media only screen and (min-width: 62rem) {
+      footer a {
+        margin: 30px auto; } }
 
 /*# sourceMappingURL=styles.css.map */
