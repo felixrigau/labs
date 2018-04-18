@@ -1,7 +1,6 @@
 <template lang="pug">
   .app
     section.courses-section
-      <!--img(src="./assets/logo.png")-->
       course-form(:courseList="courseList")
       course-list(:courseList="courseList")
   </div>
