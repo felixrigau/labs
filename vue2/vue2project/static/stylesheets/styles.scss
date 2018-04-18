@@ -1,0 +1,58 @@
+//********************** Header Styles *********************
+
+header {
+  background-color: #ffab00;
+  height: auto;
+  left: 0;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.header__logo {
+  color: #FFFFFF;
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  margin: 0 0 10px 30px;
+  padding: 0;
+  
+  i {
+    margin: 5px;
+    transform: rotate(-20deg);
+  }
+}
+
+//********************** Hero Styles *********************
+
+.hero {
+  background: url('../images/bk.jpg') fixed top center / cover no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 500px;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.hero__copy-area {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero__slogan {
+  color: #FFFFFF;
+  font-family: "Lato";
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 27px;
+}
+
+.hero__name {
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 73px;
+}
+

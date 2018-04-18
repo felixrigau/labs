@@ -8,7 +8,7 @@ form(@submit="validateForm" action="x" method="post")
   input(v-model="course.subTitle" placeholder="Breve Description")
   input(v-model="course.startDate" type="date")
   input(v-model="course.endDate" type="date")
-  input(type="submit" value="Submit")
+  input(type="submit" value="Agregar otro curso")
 </template>
 
 <script>
@@ -68,9 +68,16 @@ export default {
       if(this.errors.length) {
         e.preventDefault();
       } else {
-        this.add(); 
+        this.add();
+        this.cleanValues();
         e.preventDefault();
       }
+    },
+    cleanValues: function() {
+      this.course.title = '';
+      this.course.subTitle = '';
+      this.course.startDate = null;
+      this.course.endDate= null;
     }
   }
   /*
