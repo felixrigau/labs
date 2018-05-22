@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WeatherLocation = () => (
-    <div>WeatherLocation</div>
+    <div>WeatherLocationñ</div>
 );
 
 export default WeatherLocation;
