@@ -4,21 +4,31 @@ import WeatherLocation from './WeatherLocation';
 
 class LocationList extends Component {
 
-    constructor(cities) {
+    constructor(cities, onSelectedLocation) {
         super();
         
         this.state = {
-            cities
+            cities,
+            onSelectedLocation
         }
     }
 
+    handleWeatherLocationClick = city => {
+        console.log("handleWeatherLocationClick");
+        this.props.onSelectedLocation(city);
+    }
+
     arrToComponents = cities => (
-        cities.map( city => (<WeatherLocation city={ city }></WeatherLocation>))
+        cities.map( city => (
+                                <WeatherLocation 
+                                    key={ city } 
+                                    city={ city }
+                                    onWeatherLocationClick={() => this.handleWeatherLocationClick(city)}>
+                                </WeatherLocation>))
     );
     
     render() {
         const {cities} = this.state.cities;
-        debugger;
         return (
             <div>
                 { this.arrToComponents( cities ) }
@@ -28,7 +38,8 @@ class LocationList extends Component {
 }
 
 LocationList.propTypes = {
-    cities: PropTypes.array.isRequired
+    cities: PropTypes.array.isRequired,
+    onSelectedLocation: PropTypes.func.isRequired,
 }
 
 export default LocationList;
