@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
+import convert from 'convert-units';
 import Location from './Location'
 import WeatherData from './WeatherData';
-import { SUN, CLOUDY } from './../../constants/weathers';
+import { SUN } from './../../constants/weathers';
+
+const location = "Madrid, es";
+const api_key = "f99bbd9e4959b513e9bd0d7f7356b38d";
+const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${api_key}`;
 
 const data1 = {
     temperature: 33,
     weatherState: SUN,
     humidity: 70,
-    wind: 10
-};
-
-const data2 = {
-    temperature: 20,
-    weatherState: CLOUDY,
-    humidity: 40,
     wind: 10
 };
 
@@ -27,10 +25,38 @@ class WeatherLocation extends Component {
         };
     }
 
+    getData = weatherData => {
+        const { humidity, temp } = weatherData.main;
+        const { speed } = weatherData.wind;
+        const weatherState = this.getWeatherState(this.weather);
+        const temperature = this.getTemp(temp);
+
+        const data = {
+            humidity,
+            temperature,
+            weatherState,
+            wind: speed
+        };
+
+        return data;
+    }
+
+    getTemp = kelvin => {
+        return convert(kelvin).from('K').to('C').toFixed(1);
+    }
+
+    getWeatherState = weather => {
+        return SUN;
+    }
+
     handleUpdateClick = () => {
-        this.setState({
-            city: 'Madrid',
-            data: data2
+        fetch(api_weather)
+        .then(data => {
+            return data.json();
+        })
+        .then(weatherData => {
+            const data = this.getData(weatherData);
+            this.setState({ data });
         });
     }
 
