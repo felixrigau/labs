@@ -4,12 +4,11 @@ import WeatherLocation from './WeatherLocation';
 
 class LocationList extends Component {
 
-    constructor(cities, onSelectedLocation) {
+    constructor(cities) {
         super();
         
         this.state = {
-            cities,
-            onSelectedLocation
+            cities
         }
     }
 
