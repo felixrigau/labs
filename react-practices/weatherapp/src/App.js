@@ -14,9 +14,18 @@ const cities = [
 
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      city: null
+    }
+  }
+  
   
   handleSelectionLocation = city => {
-    console.log("handleSelectionLocation", city);
+    this.setState({city});
   }
   
   render() {
@@ -27,7 +36,7 @@ class App extends Component {
                         onSelectedLocation={this.handleSelectionLocation}/>
         </div>
         <div className="details-wrapper">
-          <ForescastExtended></ForescastExtended>
+          <ForescastExtended city={this.state.city}></ForescastExtended>
         </div>
       </div>
     );
