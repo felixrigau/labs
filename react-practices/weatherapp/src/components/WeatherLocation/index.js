@@ -5,8 +5,7 @@ import purple from '@material-ui/core/colors/blue';
 import Location from './Location'
 import WeatherData from './WeatherData';
 import transformWeather from './../../services/transformWeather';
-
-const api_key = "f99bbd9e4959b513e9bd0d7f7356b38d";
+import getAPIEndPoint from './../../api/config';
 
 class WeatherLocation extends Component {
 
@@ -20,7 +19,7 @@ class WeatherLocation extends Component {
 
     componentWillMount() {
         const {city} = this.state;
-        const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${api_key}`;
+        const api_weather = getAPIEndPoint('weather' ,city);
         fetch(api_weather)
         .then(data => {
             return data.json();

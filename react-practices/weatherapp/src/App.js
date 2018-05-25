@@ -29,6 +29,7 @@ class App extends Component {
   }
   
   render() {
+    const {city} = this.state;
     return (
       <div className="App application-content">
         <div className="location-list-wrapper">
@@ -36,7 +37,7 @@ class App extends Component {
                         onSelectedLocation={this.handleSelectionLocation}/>
         </div>
         <div className="details-wrapper">
-          <ForescastExtended city={this.state.city}></ForescastExtended>
+          { city ? <ForescastExtended city={this.state.city}></ForescastExtended> : <h3>No se ha seleccionado una ciudad</h3>}
         </div>
       </div>
     );
