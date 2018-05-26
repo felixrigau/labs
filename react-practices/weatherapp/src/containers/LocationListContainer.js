@@ -12,7 +12,7 @@ class LocationListContainer extends Component {
     render() {
         return (
             <LocationList cities = { this.props.cities }
-                        onSelectedLocation={this.handleSelectionLocation}/>
+                          onSelectedLocation={this.handleSelectionLocation}/>
         )
     }
 }
@@ -23,11 +23,7 @@ LocationListContainer.propTypes = {
 }
 
 const mapDispatchToProps = dispatch => ({
-setCity: value => dispatch(setCity(value))
+    setCity: value => dispatch(setCity(value))
 });
 
-const mapStateToProps = (state, ownProps) => ({
-    
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(LocationListContainer)
+export default connect(null, mapDispatchToProps)(LocationListContainer)
