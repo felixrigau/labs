@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import LocationList from './components/LocationList';
+import LocationListContainer from './containers/LocationListContainer';
 import ForescastExtended from './components/ForescastExtended';
+
 import './App.css';
 
 const cities = [
@@ -12,7 +13,6 @@ const cities = [
   'Moscu'
 ];
 
-
 class App extends Component {
 
   constructor(props) {
@@ -23,18 +23,12 @@ class App extends Component {
     }
   }
   
-  
-  handleSelectionLocation = city => {
-    this.setState({city});
-  }
-  
   render() {
     const {city} = this.state;
     return (
       <div className="App application-content">
         <div className="location-list-wrapper">
-          <LocationList cities = { cities }
-                        onSelectedLocation={this.handleSelectionLocation}/>
+          <LocationListContainer cities = { cities }/>
         </div>
         <div className="details-wrapper">
           { city ? <ForescastExtended city={this.state.city}></ForescastExtended> : <h3>No se ha seleccionado una ciudad</h3>}
