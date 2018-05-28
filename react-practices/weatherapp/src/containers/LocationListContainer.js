@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import LocationList from '../components/LocationList'
-import { setCity } from '../actions/index'
+import { setSelectedCity } from '../actions/index'
 
 class LocationListContainer extends Component {
     handleSelectionLocation = city => {
@@ -23,7 +23,7 @@ LocationListContainer.propTypes = {
 }
 
 const mapDispatchToProps = dispatch => ({
-    setCity: value => dispatch(setCity(value))
+    setCity: value => dispatch(setSelectedCity(value))
 });
 
 export default connect(null, mapDispatchToProps)(LocationListContainer)
