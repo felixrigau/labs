@@ -60,16 +60,4 @@ MongoClient.connect(url, function(err, client) {
   
   userWithPostMoreThan(4)
   
-  //Find
-  usersCollection.find({"done":true}).toArray(function(err, docs) {
-    if (err) {
-      console.log('error', err);
-    } else {
-      console.log('Found the following records', docs);
-    }
-    console.log("Found the following records");
-  });
-  
-  // Cerramos la conexión
-  client.close();
 });
