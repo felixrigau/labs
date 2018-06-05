@@ -4,30 +4,22 @@ import WeatherLocation from './WeatherLocation';
 
 class LocationList extends Component {
 
-    constructor(cities) {
-        super();
-        
-        this.state = {
-            cities
-        }
-    }
-
     handleWeatherLocationClick = city => {
-        console.log("handleWeatherLocationClick");
         this.props.onSelectedLocation(city);
     }
 
     arrToComponents = cities => (
         cities.map( city => (
                                 <WeatherLocation 
-                                    key={ city } 
-                                    city={ city }
-                                    onWeatherLocationClick={() => this.handleWeatherLocationClick(city)}>
+                                    key={ city.key } 
+                                    city={ city.name }
+                                    onWeatherLocationClick={() => this.handleWeatherLocationClick(city.name)}
+                                    data = {city.data}>
                                 </WeatherLocation>))
     );
     
     render() {
-        const {cities} = this.state.cities;
+        const cities = this.props.cities;
         return (
             <div>
                 { this.arrToComponents( cities ) }
